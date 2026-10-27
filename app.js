@@ -4,7 +4,7 @@
   const settings = { n: 4, n1: 2, m: 4 };
   const exercisePresets = {
     pullup: { n: 4, n1: 2 },
-    squat: { n: 5, n1: 2.5 },
+    squat: { n: 6, n1: 3 },
   };
   const limits = { n: [1, 7], m: [1, 5] };
   const copy = {
