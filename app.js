@@ -1,9 +1,9 @@
 (() => {
   "use strict";
 
-  const settings = { n: 4, n1: 2, m: 4 };
+  const settings = { n: 5, n1: 2.5, m: 4 };
   const exercisePresets = {
-    pullup: { n: 4, n1: 2 },
+    pullup: { n: 5, n1: 2.5 },
     squat: { n: 6, n1: 3 },
   };
   const limits = { n: [1, 7], m: [1, 5] };
@@ -204,8 +204,7 @@
     if (running || elapsedBeforeStart > 0 || finished) return;
     if (name === "n") {
       settings.n = Math.max(limits.n[0], Math.min(limits.n[1], settings.n + delta));
-      settings.n1 = Math.min(settings.n1, settings.n - 0.5);
-      settings.n1 = Math.max(0.5, settings.n1);
+      settings.n1 = settings.n / 2;
     } else if (name === "m") {
       settings.m = Math.max(limits.m[0], Math.min(limits.m[1], settings.m + delta));
     } else {
